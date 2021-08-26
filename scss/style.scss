@@ -1,0 +1,144 @@
+@import "variables";
+@import "mixins";
+
+// resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  background-color: $light-gray;
+  line-height: 1.2;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: $cyan;
+  margin-bottom: 1em;
+
+  @include for-mobile {
+    font-size: 1.2rem;
+  }
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: $light-gray;
+  margin-bottom: 1em;
+}
+
+p {
+  color: $light-gray;
+  font-size: 0.95rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: $light-gray;
+  font-size: 0.9rem;
+  margin-top: 0.3em;
+}
+
+div {
+  padding: 2.5em;
+
+  @include for-mobile {
+    padding: 1.5em;
+  }
+}
+
+.card {
+  max-width: 650px;
+  background-color: $white;
+  border-radius: 0.325em;
+  box-shadow: 0 1em 3em -1em $grayish-blue;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+
+  @include for-mobile {
+    max-width: 325px;
+    display: block;
+  }
+}
+
+.desc {
+  grid-column: 1/3;
+
+  h2 {
+    color: $bright-yellow;
+    margin-bottom: 0.5em;
+
+    @include for-mobile {
+      font-size: 0.9rem;
+      margin-bottom: 1em;
+    }
+  }
+
+  p {
+    color: $grayish-blue;
+    line-height: 1.6;
+
+    @include for-mobile {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.pricing {
+  background-color: $cyan;
+  display: flex;
+  flex-direction: column;
+
+  .price {
+    color: $light-cyan-text;
+    margin-bottom: 0.5em;
+
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-right: 0.2em;
+      vertical-align: middle;
+      color: $light-gray;
+    }
+  }
+
+  .full-access {
+    flex-grow: 1;
+    margin-bottom: 2em;
+  }
+
+  .btn-sign-up {
+    padding: 1em;
+    border-radius: 0.325em;
+    font-weight: bold;
+    color: $light-gray;
+    background-color: $bright-yellow;
+    border: transparent;
+    outline: transparent;
+    font-size: 1rem;
+  }
+}
+
+.why-us {
+  background-color: $light-cyan;
+}
