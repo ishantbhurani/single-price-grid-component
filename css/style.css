@@ -100,7 +100,7 @@ div {
 }
 
 .desc h2 {
-  color: #b3d421;
+  color: #c0df34;
   margin-bottom: 0.5em;
 }
 
@@ -158,10 +158,12 @@ div {
   border-radius: 0.325em;
   font-weight: bold;
   color: #e5eff5;
-  background-color: #b3d421;
+  background-color: #c0df34;
   border: transparent;
   outline: transparent;
   font-size: 1rem;
+  -webkit-box-shadow: 0 0.5em 1em -0.5em #777;
+          box-shadow: 0 0.5em 1em -0.5em #777;
 }
 
 .why-us {
